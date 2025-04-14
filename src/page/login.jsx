@@ -44,18 +44,7 @@ const Login = () => {
         setRole(selectedRole);
     };
 
-    const handleGoogleLogin = async (credentialResponse) => {
-        try {
-            const response = await axios.post(`${BASE_URL}/api/google-login`, {
-                token: credentialResponse.credential,
-            });
-            if (response.status === 200) {
-                navigate("/dashboard");
-            }
-        } catch (error) {
-            console.error("Google login failed", error);
-        }
-    };
+    
 
     return (
         <div className="container d-flex justify-content-center align-items-center min-vh-100">
@@ -129,17 +118,15 @@ const Login = () => {
                                 </button>
                             </form>
 
-                            {role === "user" && (
+                            {/* {role === "user" && (
                                 <button
                                     type="button"
                                     className="btn btn-outline-danger w-100 mt-2"
-                                    onClick={() => {
-                                        handleGoogleLogin({ credential: "dummy_google_token" });
-                                    }}
+                                    onClick={handleGoogleLogin}
                                 >
                                     <i class="fa-brands fa-google"></i> Login with Google
                                 </button>
-                            )}
+                            )} */}
 
 
                             <div className="text-end mt-3">
