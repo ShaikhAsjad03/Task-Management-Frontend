@@ -1,0 +1,48 @@
+.header {
+    position: relative;
+    left: 270px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    color: white;
+    padding: 20px;
+    width: calc(100% - 270px);
+    /* overflow: hidden; */
+      transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
+  }
+  
+  .headerhalf {
+    left: 0;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 990px) {
+    .header {
+      left:0;       /* On small screens, usually we want it to span full width */
+      width: 100%;
+    }
+  }
+  
+  .menu-btn {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    display: none;
+  }
+  
+  .header-content h1 {
+    font-size: 24px;
+  }
+  
+  @media (max-width: 991px) {
+    .menu-btn {
+      display: block; /* Show hamburger icon on mobile */
+    }
+  
+    .header-content h1 {
+      font-size: 20px; /* Adjust heading size on mobile */
+    }
+  }
+  

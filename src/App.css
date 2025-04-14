@@ -1,0 +1,251 @@
+/* .desktop-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  z-index: 1030;
+}
+
+.mobile-top-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: auto;
+  max-height: 80vh;
+  overflow-y: auto;
+  z-index: 1050;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.mobile-top-modal.show {
+  transform: translateY(0);
+}
+
+.mobile-top-modal.hide {
+  transform: translateY(-100%);
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+} */
+
+
+
+.pages-content{
+  position: relative;
+  left: 270px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: white;
+  padding: 20px;
+  width: calc(100% - 270px);
+  overflow: hidden;
+  margin-bottom: 100px;
+    transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+.pages-content-open {
+  left: 0;
+  width: 100%;
+  }
+
+  @media screen and (max-width: 990px) {
+    .pages-content {
+      left:0;       /* On small screens, usually we want it to span full width */
+      width: 100%;
+    }
+  }
+
+
+  
+
+.search-box {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+
+.input-search {
+  height: 40px;
+  width: 40px;
+  border-style: none;
+  padding: 5px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+  background: linear-gradient(45deg, rgba(163, 10, 18, 0.9), rgba(16, 12, 10, 0.9));
+  padding-right: 30px;
+  color: #333;
+
+}
+
+.input-search::placeholder {
+  color: rgba(11, 11, 11, 0.5);
+  font-size: 15px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+
+.btn-search {
+  width: 40px;
+  height: 40px;
+  border-style: none;
+  font-size: 15px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color: #fff;
+  background-color: transparent;
+  pointer-events: painted;
+}
+
+.btn-search:focus~.input-search {
+  width: 300px;
+  border-radius: 0px;
+  background: transparent;
+  border-bottom: 5px solid rgba(8, 8, 8, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+.input-search::placeholder {
+  color: transparent;
+}
+
+.input-search:focus {
+  width: 300px;
+  border-radius: 0px;
+  background: transparent;
+  border-bottom: 5px solid rgba(8, 8, 8, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+.btn-search:focus~.input-search::placeholder {
+  color: #333;
+}
+
+.ellipse-bg {
+  background-color: #f0f8ff; 
+  width: 50px;             
+  height: 50px;            
+  border-radius: 10%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ .ellipse-bg:nth-child(2) {
+  background-color: #fff3e6; 
+}
+
+ .ellipse-bg:nth-child(3) {
+  background-color: #e6f7ff; 
+}
+
+.ellipse-bg:nth-child(4) {
+  background-color: #f6ffed;
+}
+
+
+
+
+.animate__animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animate__fadeInUp {
+  animation-name: fadeInUp;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-custom{
+  transition: 0.5s;
+}
+.card-custom:hover{
+  transform: scale(1.05); 
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  z-index: 999;
+}
+
+.count-button1 {
+
+  background-color: rgba(44, 44, 44, 0.15) !important;
+  /* color: #0c4315; */
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(208, 209, 211, 0.15);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  color: #333;
+  font-weight: bold;
+}
+
+.count-button1::before {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.4);
+  height: 100%;
+  width: 120%;
+  top: 0;
+  left: -150%;
+  transform: skewX(-30deg);
+  transition: all 0.75s ease-in-out;
+}
+
+.count-button1:hover::before {
+  left: 120%;
+}
+
+.count-button1:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 132, 255, 0.25);
+}
+
+.count-button1:active {
+  transform: scale(0.97);
+}
