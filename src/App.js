@@ -20,7 +20,6 @@ import GetAllTask from "./page/admin/GetAllTask";
 import AdminDashboard from "./page/admin/AdminDashboard";
 import InActiveUser from "./page/admin/InActiveUser";
 
-
 function RequireAuth({ children, allowedRole }) {
   const token = localStorage.getItem(`${allowedRole}AccessToken`);
   const payload = localStorage.getItem(`${allowedRole}payload`);
